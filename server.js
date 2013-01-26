@@ -14,7 +14,7 @@ http.createServer(function(req, res) {
             "url": req.url,
             "headers": req.headers,
             "body": request_body,
-            "ip": ("X-Forwarded-For" in req.headers)? req.headers["X-Forwarded-For"] : req.connection.remoteAddress
+            "ip": ("x-forwarded-for" in req.headers)? req.headers["x-forwarded-for"] : req.connection.remoteAddress
         };
 
         res.setHeader("Content-Type", "application/json");
