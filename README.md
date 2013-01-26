@@ -4,9 +4,9 @@ Dump everything about the HTTP request (and may be some more)
 
 Hosted at Heroku and ready to use, give it a try
 
-[http://httpdump.herokuapp.com/](http://httpdump.herokuapp.com/)
-[http://httpdump.herokuapp.com/tell/me/more](http://httpdump.herokuapp.com/tell/me/more)
-[http://httpdump.herokuapp.com/ask?q=what](http://httpdump.herokuapp.com/ask?q=what)
+* [http://httpdump.herokuapp.com/](http://httpdump.herokuapp.com/)
+* [http://httpdump.herokuapp.com/tell/me/more](http://httpdump.herokuapp.com/tell/me/more)
+* [http://httpdump.herokuapp.com/ask?q=what](http://httpdump.herokuapp.com/ask?q=what)
 
 Using curl
 
