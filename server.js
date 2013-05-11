@@ -1,4 +1,6 @@
-var http = require('http');
+var http = require('http'),
+    _ = require('lodash');
+
 var port = process.env.PORT || 5000;
 http.createServer(function(req, res) {
     var request_body = "";
@@ -6,13 +8,16 @@ http.createServer(function(req, res) {
         request_body += chunk;
     });
 
+    // remove x-heroku headers
+    var headers = _.pick(req.headers, function(value, name) { return (name.indexOf("x-heroku") !== 0) });
+
     var response_data = {};
     req.on("end", function() {
         response_data = {
             "method": req.method,
             "version": req.httpVersion,
             "url": req.url,
-            "headers": req.headers,
+            "headers": headers,
             "body": request_body,
             "ip": ("x-forwarded-for" in req.headers)? req.headers["x-forwarded-for"] : req.connection.remoteAddress
         };
