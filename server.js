@@ -24,7 +24,7 @@ http.createServer(function(req, res) {
 
         res.setHeader("Content-Type", "application/json");
         res.setHeader("Server", "HTTP Dumper");
-        res.end(JSON.stringify(response_data) + "\n");
+        res.end(JSON.stringify(response_data, null, 4) + "\n");
     });
 }).listen(port, function() {
     console.log("Server listening on port " + port);
